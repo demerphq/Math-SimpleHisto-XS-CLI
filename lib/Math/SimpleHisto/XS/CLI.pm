@@ -29,6 +29,7 @@ our %EXPORT_TAGS = (
 );
 
 use Math::SimpleHisto::XS;
+use Term::Size;
 
 sub histogram_from_dumps_fh {
   my ($fh) = @_;
