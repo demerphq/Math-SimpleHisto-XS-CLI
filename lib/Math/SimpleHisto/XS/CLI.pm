@@ -326,10 +326,10 @@ sub draw_ascii_histogram {
     $hlen = $v_hist_width if $hlen > $v_hist_width;
 
     if ($hlen >= $hchar_end_len) {
-      printf($format, $desc, $formatted_value, ($hchar_body x ($hlen-$hchar_end_len)) . $hchar_end);
+      printf $ofh $format, $desc, $formatted_value, ($hchar_body x ($hlen-$hchar_end_len)) . $hchar_end;
     }
     else {
-      printf($format, $desc, $formatted_value, ($hchar_body x $hlen));
+      printf $ofh $format, $desc, $formatted_value, ($hchar_body x $hlen);
     }
   }
 
